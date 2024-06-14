@@ -16,4 +16,4 @@ def ask(text: str, image: UploadFile):
 
     image = Image.open(io.BytesIO(content))
     result = model_pipeline(text, image)
-    return result
+    return {"result": result}
